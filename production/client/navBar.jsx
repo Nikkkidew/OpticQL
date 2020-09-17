@@ -1,5 +1,7 @@
 import React from 'react';
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory, Link, Router, Route } from 'react-router-dom';
+import history from "./history.js";
+import PassToMeMyRouterHistory from "./historyNav.jsx";
 
 const NavBar = () => {
 	// remember to ask patrick and rebecca for the logo code
@@ -15,11 +17,12 @@ const NavBar = () => {
 				<Link to="/history">Historical Performance</Link>
 			</button>
 
-			{/* <button component={Link} to="/history">
-				Click Me
-</button> */}
-
-		</div>
+			<PassToMeMyRouterHistory />
+			{/* <button onClick={() => history.push('/history')}>goto /history</button> */}
+			{/* <button onClick={() => history.push('/')}>goto /</button> 
+				Test me
+			</button> */}
+		</div >
 	);
 }
 
